@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Contador regressivo para viagem ao Beto Carrero World - 16 de outubro de 2025">
+    <meta name="theme-color" content="#1a1a1a">
     <title>Contador Regressivo - 16 de Outubro</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -45,6 +47,38 @@
                     🏖️ Hospedagem Penha
                 </a>
             </div>
+        </div>
+    </div>
+    
+    <!-- Botão Biométrico Centralizado -->
+    <div class="biometric-container">
+        <button id="biometricBtn" class="biometric-btn" title="Autenticação Biométrica">
+            <div class="fingerprint-icon">
+                <div class="fingerprint-lines">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                    <div class="line line4"></div>
+                    <div class="line line5"></div>
+                </div>
+            </div>
+        </button>
+    </div>
+    
+    <!-- Modal Biométrico -->
+    <div id="biometricModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🔐 Autenticação Biométrica</h2>
+            <div id="cameraContainer">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            <div class="modal-buttons">
+                <button id="captureBtn" class="capture-btn">📸 Capturar</button>
+                <button id="processBtn" class="process-btn" style="display: none;">🔍 Processar</button>
+            </div>
+            <div id="result" class="result"></div>
         </div>
     </div>
     
